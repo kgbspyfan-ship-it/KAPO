@@ -129,6 +129,20 @@
             padding: 1rem 0;
         }
 
+        /* Логотип + Название */
+        .header-logo-group {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Стиль для LOGO.png */
+        .main-logo-icon {
+            width: 80px; 
+            height: 80px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
         .logo h1 {
             font-size: clamp(0.9rem, 3vw, 1.3rem);
             font-weight: 400;
@@ -244,7 +258,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(11, 42, 74, 0.95) 0%, rgba(17, 50, 88, 0.8) 100%);
+            /* Изменен: Добавлен едва заметный градиент поверх синей заливки */
+            background: linear-gradient(135deg, rgba(11, 42, 74, 0.97) 0%, rgba(17, 50, 88, 0.9) 100%);
             z-index: 1;
         }
 
@@ -356,6 +371,17 @@
             margin-bottom: 1rem;
             font-family: 'Inter', sans-serif;
         }
+        
+        /* Стиль для добавленного слова "Адвокат" */
+        .member-role::before {
+            content: "АДВОКАТ \A"; /* Добавляем "АДВОКАТ" с переносом строки */
+            white-space: pre;
+            color: var(--dark-prime);
+            font-weight: 500;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
 
         .member-phone {
             font-family: 'Inter', sans-serif;
@@ -457,11 +483,12 @@
         }
 
         /* Иконки преимуществ (128x128px, отображаются 30px) */
+        /* Изменено: Увеличен размер в 2 раза */
         .adv-icon {
-            width: 30px; 
-            height: 30px;
+            width: 60px; 
+            height: 60px;
             margin-right: 1rem;
-            margin-top: 0.2rem; /* Небольшой отступ, чтобы выровнять с текстом */
+            margin-top: 0; /* Убираем небольшой отступ */
         }
 
         .advantage-item p {
@@ -593,11 +620,16 @@
             border: none;
             color: var(--light);
             cursor: pointer;
-            padding: 0.5rem;
-            width: 30px;
-            height: 30px;
+            /* Изменено: Установлен размер как у .header-phone-icon */
+            padding: 0; 
+            width: 2rem; 
+            height: 2rem;
             position: relative;
             z-index: 1001;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .mobile-menu-btn .bar {
@@ -605,18 +637,19 @@
             width: 100%;
             height: 3px;
             background: var(--light);
-            margin: 5px 0;
+            margin: 4px 0; /* Уменьшаем отступ для 1.5rem высоты */
             transition: var(--transition);
             border-radius: 2px;
         }
-
+        
+        /* Адаптивные стили */
         @media (max-width: 768px) {
             .header-content {
                 padding: 0.8rem 0;
             }
             
             .mobile-menu-btn {
-                display: block;
+                display: flex; /* Показываем на мобильных */
                 order: 3;
             }
             
@@ -628,6 +661,7 @@
                 display: block; 
                 order: 2;
                 margin-left: auto;
+                margin-right: 15px;
             }
             
             /* Адаптивные стили для мобильного меню */
@@ -701,10 +735,13 @@
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <h1>КОЛЛЕГИЯ АДВОКАТОВ</h1>
-                <span class="firm-name">"Кузнецов и Партнеры"</span>
-                <span class="subtitle">Псковской области</span>
+            <div class="header-logo-group">
+                <span class="png-background main-logo-icon" style="background-image: url('LOGO.png');" aria-label="Логотип коллегии"></span>
+                <div class="logo">
+                    <h1>КОЛЛЕГИЯ АДВОКАТОВ</h1>
+                    <span class="firm-name">"Кузнецов и Партнеры"</span>
+                    <span class="subtitle">Псковской области</span>
+                </div>
             </div>
             
             <a href="tel:+79113828929" class="header-phone phone-link">+7 911 382-89-29</a>
