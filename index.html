@@ -180,8 +180,8 @@
         
         /* Иконка телефона в шапке (phone-icon-header.png) */
         .header-phone-icon {
-            width: 1.5rem; 
-            height: 1.5rem;
+            width: 2rem; 
+            height: 2rem;
             margin: 0 auto;
         }
         
@@ -645,12 +645,13 @@
         /* Адаптивные стили */
         @media (max-width: 768px) {
             .header-content {
-                padding: 0.8rem 0;
+                padding: 0.8rem 20px;
             }
             
             .mobile-menu-btn {
                 display: flex; /* Показываем на мобильных */
                 order: 3;
+                margin-left: 15px; /* ДОБАВЛЯЕМ НЕБОЛЬШОЙ ОТСТУП СЛЕВА ОТ БУРГЕРА */
             }
             
             .header-phone {
@@ -661,7 +662,7 @@
                 display: block; 
                 order: 2;
                 margin-left: auto;
-                margin-right: 15px;
+                margin-right: 0;
             }
             
             /* Адаптивные стили для мобильного меню */
@@ -770,7 +771,7 @@
     <section class="hero" id="home" style="background-image: url('placeholder-office.jpg');">
         <div class="container hero-content">
             <h2 class="animate-in">Надежная Юридическая защита</h2>
-            <p class="animate-in delay-1">Более 20 лет успешной практики. Полное сопровождение дел любой сложности в Северо-Западном регионе.</p>
+            <p class="animate-in delay-1">Более 20 лет успешной практики. Полное сопровождение дел любой сложности.</p>
             </div>
     </section>
 
@@ -886,9 +887,11 @@
                         <span class="contact-icon">📧</span>
                         <a href="mailto:mapk@bk.ru">mapk@bk.ru</a>
                     </div>
-                    <div class="contact-item">
+                   <div class="contact-item">
                         <span class="contact-icon">📍</span>
-                        <p>г. Псков, ул. Аллейная, д. 1</p>
+                        <a href="https://maps.google.com/maps?q=г.+Псков,+ул.+Аллейная,+д.+1" target="_blank">
+                            г. Псков, ул. Аллейная, д. 1
+                        </a>
                     </div>
                 </div>
                 
@@ -907,7 +910,7 @@
             <p class="footer-title">КОЛЛЕГИЯ АДВОКАТОВ ПСКОВСКОЙ ОБЛАСТИ "КУЗНЕЦОВ И ПАРТНЕРЫ"</p>
             <p class="footer-association">Адвокатская палата Псковской области</p>
             <div class="requisites">
-                <span>ОГРН 1186000000438</span> | <span>ИНН 6027193495</span>
+                <span>ОГРН 1186000000438</span> <br class="mobile-break"> <span>ИНН 6027193495</span>
             </div>
             <div class="footer-info">© 2025 Все права защищены.</div>
         </div>
