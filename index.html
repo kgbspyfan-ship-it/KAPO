@@ -338,8 +338,16 @@
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            grid-template-columns: 1fr;
             gap: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1300px) {
+            .team-grid { grid-template-columns: repeat(4, 1fr); }
         }
 
         .team-member {
@@ -349,6 +357,8 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             border-top: 4px solid var(--accent);
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Фото адвокатов (kuznetsov.png, ostapenko.png, babiychuk.png) */
@@ -368,6 +378,10 @@
             margin-bottom: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            min-height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .member-role {
@@ -375,6 +389,10 @@
             font-size: 0.95rem;
             margin-bottom: 1rem;
             font-family: 'Inter', sans-serif;
+            min-height: 7rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         /* Стиль для добавленного слова "Адвокат" */
@@ -403,6 +421,7 @@
             padding-left: 0;
             border-top: 1px solid var(--light-gray);
             margin-top: 1.5rem;
+            flex: 1;
         }
 
         .member-specialization li {
@@ -890,6 +909,19 @@
                         <li>Гражданские споры и арбитраж</li>
                         <li>Корпоративные вопросы и сопровождение бизнеса</li>
                         <li>Административные дела (взаимодействие с госорганами)</li>
+                    </ul>
+                </div>
+                
+                <div class="team-member card-hover">
+                    <div class="member-photo png-background" style="background-image: url('kolokoltsev.jpg'); background-position: center 20%;" aria-label="Фото адвоката"></div>
+                    <h3 class="member-name">КОЛОКОЛЬЦЕВ АЛЕКСЕЙ СЕРГЕЕВИЧ</h3>
+                    <div class="member-role">Эксперт по гражданским и уголовным вопросам</div>
+                    <a href="tel:+79113942789" class="member-phone">+7 911 394-27-89</a>
+                    <ul class="member-specialization">
+                        <li>Уголовные дела любой сложности</li>
+                        <li>Защита на следствии и в суде</li>
+                        <li>Административные дела</li>
+                        <li>Гражданские споры и банкротство</li>
                     </ul>
                 </div>
             </div>
