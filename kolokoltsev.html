@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колокольцев Алексей Сергеевич | Адвокат в Пскове | Уголовные и Гражданские дела</title>
+    <meta name="description" content="Колокольцев Алексей Сергеевич - опытный адвокат в Пскове. Специализация: уголовные дела, гражданские споры, банкротство. Консультация по телефону +7 911 394-27-89.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. Базовые настройки и переменные */
+        :root {
+            --dark-prime: #0B2A4A;
+            --dark-text: #2c2c2c;
+            --accent: #C79F3F;
+            --accent-light: #E3B359;
+            --light: #ffffff;
+            --gray: #666666;
+            --light-gray: #f2f2f2;
+            --border-radius: 4px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.7;
+            color: var(--dark-text);
+            background: var(--light);
+            font-weight: 400;
+            font-size: 17px;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+            font-weight: 600;
+            color: var(--dark-prime);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .png-background {
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            text-indent: -9999px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .primary-btn {
+            background: var(--accent);
+            color: var(--dark-prime);
+        }
+
+        .primary-btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(199, 159, 63, 0.4);
+        }
+
+        .secondary-btn {
+            background: transparent;
+            border: 2px solid var(--light);
+            color: var(--light);
+            padding: 10px 28px;
+            font-size: 1.1rem;
+        }
+
+        .secondary-btn:hover {
+            background: var(--light);
+            color: var(--dark-prime);
+            transform: translateY(-2px);
+        }
+
+        .mobile-break {
+            display: none;
+        }
+
+        /* 2. Шапка (Header) */
+        header {
+            background: var(--dark-prime);
+            color: var(--light);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .header-logo-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-logo-icon {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .logo h1 {
+            font-size: clamp(0.9rem, 3vw, 1.3rem);
+            font-weight: 400;
+            color: #ccc;
+            margin-bottom: 0.1rem;
+        }
+
+        .logo .firm-name {
+            color: var(--accent-light);
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 5vw, 2rem);
+            display: block;
+            line-height: 1;
+        }
+
+        .logo .subtitle {
+            font-size: clamp(0.7rem, 2vw, 0.8rem);
+            color: #999;
+            margin-top: 0.1rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header-action-btn {
+            background: var(--accent);
+            color: var(--light);
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 8px 12px;
+            margin-left: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            line-height: 1;
+            display: none;
+        }
+
+        .header-phone-icon {
+            width: 2rem;
+            height: 2rem;
+            margin: 0 auto;
+        }
+
+        .header-action-btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+
+        .header-phone {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: var(--light);
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            margin-left: 1.5rem;
+            margin-right: auto;
+            white-space: nowrap;
+        }
+
+        .phone-link:hover {
+            color: var(--accent);
+        }
+
+        /* Навигация */
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--light);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        /* 3. Герой блок (Hero) */
+        .hero {
+            background-image: url('placeholder-office.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            padding: clamp(6rem, 15vw, 10rem) 0 clamp(4rem, 10vw, 7rem);
+            min-height: 20vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(11, 42, 74, 0.97) 0%, rgba(17, 50, 88, 0.9) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--light);
+            text-align: left;
+            max-width: 800px;
+            padding-top: 50px;
+        }
+
+        .hero h1 {
+            color: var(--light);
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            max-width: 80%;
+        }
+
+        .hero p {
+            color: var(--light);
+            font-size: clamp(1rem, 4vw, 1.4rem);
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .hero .btn {
+            font-size: 1.1rem;
+        }
+
+        /* 4. Общие стили секций */
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: clamp(2rem, 6vw, 4rem);
+            text-transform: uppercase;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+            margin: 1.2rem auto 0;
+            border-radius: 50%;
+        }
+
+        /* 5. Карточки и тени */
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .card-hover {
+            transition: var(--transition);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* 6. Профиль адвоката */
+        .lawyer-profile {
+            padding: clamp(3rem, 10vw, 8rem) 0;
+            background: var(--light);
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 3/4;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            background-size: cover;
+            background-position: center 20%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .profile-info h2 {
+            font-size: clamp(1.8rem, 5vw, 2.4rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-role {
+            color: var(--accent);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--dark-text);
+        }
+
+        .profile-contact {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        .profile-contact p {
+            margin: 0 0 0.8rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .profile-contact a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+        }
+
+        /* 7. Области практики (Practice Areas) */
+        .practice-areas {
+            padding: clamp(3rem, 10vw, 8rem) 0;
+            background: var(--light-gray);
+        }
+
+        .practice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: 2rem;
+        }
+
+        .practice-item {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        /* Иконки услуг (128x128px, отображаются 64px) */
+        .practice-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+        }
+
+        .practice-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .practice-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 8. Преимущества */
+        .advantages {
+            padding: clamp(3rem, 8vw, 6rem) 0;
+            background: var(--light);
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: 1.5rem;
+        }
+
+        .advantage-item {
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--accent);
+            background: var(--light);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .adv-icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 1rem;
+            margin-top: 0;
+            flex-shrink: 0;
+        }
+
+        .advantage-item p {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+        }
+
+        /* 9. Призыв к действию (CTA) */
+        .cta {
+            background: var(--dark-prime);
+            color: var(--light);
+            padding: clamp(4rem, 8vw, 5rem) 0;
+            text-align: center;
+        }
+
+        .cta h3 {
+            color: var(--light);
+            font-size: clamp(2rem, 6vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            color: var(--light);
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* 10. Контакты */
+        .contacts {
+            padding: clamp(3rem, 8vw, 6rem) 0;
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-details {
+            text-align: left;
+        }
+
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-right: 1rem;
+            line-height: 1;
+        }
+
+        .contact-item a, .contact-item p {
+            color: var(--dark-text);
+            margin: 0;
+        }
+
+        .qr-code {
+            max-width: 180px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-color: var(--light);
+            margin: 0 auto 1rem;
+            border: 3px solid var(--dark-prime);
+            border-radius: var(--border-radius);
+            display: block;
+        }
+
+        .qr-text {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 11. Подвал (Footer) */
+        footer {
+            background: var(--dark-prime);
+            color: #999;
+            padding: 3rem 0;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--light);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .requisites span {
+            margin: 0 0.5rem;
+            opacity: 0.8;
+        }
+
+        .footer-info {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Back to main button */
+        .back-to-main {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 10px 20px;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: var(--dark-prime);
+            border: 1px solid var(--accent);
+        }
+
+        .back-to-main:hover {
+            background: var(--accent);
+            color: var(--light);
+        }
+
+        /* 12. Мобильная навигация */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light);
+            cursor: pointer;
+            padding: 0;
+            width: 2rem;
+            height: 2rem;
+            position: relative;
+            z-index: 1001;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mobile-menu-btn .bar {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--light);
+            margin: 4px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0.8rem 20px;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                order: 3;
+                margin-left: 15px;
+            }
+
+            .header-phone {
+                display: none;
+            }
+
+            .header-action-btn {
+                display: block;
+                order: 2;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .mobile-break {
+                display: block;
+                content: '';
+                margin: 0;
+            }
+
+            nav {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: var(--dark-prime);
+                height: calc(100vh - 60px);
+                overflow-y: auto;
+                padding: 2rem 0;
+                z-index: 999;
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            nav.active {
+                display: block;
+                transform: translateX(0);
+                opacity: 1;
+                transition: transform 0.4s ease, opacity 0.4s ease;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                text-align: center;
+            }
+
+            nav li {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            nav a {
+                display: block;
+                padding: 1rem 0;
+                font-size: 1.1rem;
+            }
+
+            nav a:after {
+                display: none;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero h1 {
+                max-width: 100%;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                flex-direction: column;
+            }
+
+            .contact-details {
+                text-align: center;
+            }
+
+            .contact-item {
+                justify-content: center;
+            }
+
+            .qr-code {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="header-logo-group">
+                <span class="png-background main-logo-icon" style="background-image: url('LOGO.png');" aria-label="Логотип коллегии"></span>
+                <div class="logo">
+                    <h1>КОЛЛЕГИЯ АДВОКАТОВ</h1>
+                    <span class="firm-name">"Кузнецов и Партнеры"</span>
+                    <span class="subtitle">Псковской области</span>
+                </div>
+            </div>
+
+            <a href="tel:+79113942789" class="header-phone phone-link">+7 911 394-27-89</a>
+
+            <a href="tel:+79113942789" class="header-action-btn" title="Позвонить адвокату">
+                <span class="png-background header-phone-icon" style="background-image: url('phone-icon-header.png');" aria-label="Телефон"></span>
+            </a>
+
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Открыть меню">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" onclick="closeMenu()">На главную</a></li>
+                    <li><a href="index.html#team" onclick="closeMenu()">Команда</a></li>
+                    <li><a href="index.html#practice" onclick="closeMenu()">Услуги</a></li>
+                    <li><a href="index.html#contacts" onclick="closeMenu()">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home" style="background-image: url('placeholder-office.jpg');">
+        <div class="container hero-content">
+            <h1>Алексей Сергеевич Колокольцев</h1>
+            <p>Адвокатская практика · стаж более 20 лет</p>
+            <p>Защита по уголовным делам и представительство в арбитражных судах. Работа по существу, с опорой на закон и процессуальный опыт.</p>
+        </div>
+    </section>
+
+    <section class="lawyer-profile" id="profile">
+        <div class="container">
+            <a href="index.html" class="back-to-main">← Вернуться на главную</a>
+            <div class="profile-grid">
+                <div class="profile-photo png-background" style="background-image: url('kolokoltsev.jpg');"></div>
+                <div class="profile-info">
+                    <h2>Колокольцев Алексей Сергеевич</h2>
+                    <div class="profile-role">Адвокат Коллегии адвокатов Псковской области</div>
+
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 1.5rem 0; background: var(--light-gray); padding: 1.5rem; border-radius: var(--border-radius);">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">20+</div>
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--gray);">лет в юридической профессии</p>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 700; color: var(--accent);">3</div>
+                            <p style="margin: 0; font-size: 0.95rem; color: var(--gray);">основных направления практики</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Каждое дело — это работа с деталями: документами, сроками и процессуальными нюансами. За более чем двадцать лет в профессии я веду дела последовательно и без громких обещаний.
+                    </p>
+
+                    <p>
+                        Моя задача — разобраться в ситуации, выстроить позицию и довести её до результата в рамках закона. Участие на всех стадиях процесса — от доследственной проверки до обжалования приговора в вышестоящих инстанциях.
+                    </p>
+
+                    <div class="profile-contact">
+                        <p><strong>Свяжитесь со мной:</strong></p>
+                        <a href="tel:+79113942789">+7 911 394-27-89</a>
+                        <p style="margin-top: 0.8rem; margin-bottom: 0.4rem;">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:kolokol-2@inbox.ru">kolokol-2@inbox.ru</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="practice-areas" id="specialization">
+        <div class="container">
+            <h2 class="section-title">Направления Деятельности</h2>
+            <div class="practice-grid">
+                <div class="practice-item card-hover">
+                    <span class="png-background practice-icon" style="background-image: url('criminal-law-icon.png');">Уголовные дела</span>
+                    <h3>Уголовные дела</h3>
+                    <p>Защита на всех стадиях: доследственная проверка, следствие, суд первой инстанции, обжалование приговоров. Дела любой сложности.</p>
+                </div>
+                <div class="practice-item card-hover">
+                    <span class="png-background practice-icon" style="background-image: url('civil-law-icon.png');">Гражданские дела</span>
+                    <h3>Гражданские дела</h3>
+                    <p>Споры по недвижимости и наследству, договоры подряда и услуг, взыскание задолженности, представительство в судах.</p>
+                </div>
+                <div class="practice-item card-hover">
+                    <span class="png-background practice-icon" style="background-image: url('corporate-disputes-icon.png');">Банкротство</span>
+                    <h3>Банкротство</h3>
+                    <p>Сопровождение банкротства физических лиц: подготовка документов, работа с кредиторами и финансовым управляющим, списание долгов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают меня</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item card-shadow">
+                    <span class="png-background adv-icon" style="background-image: url('competence-icon.png');">Компетентность</span>
+                    <p><strong>Опыт:</strong> Более 20 лет практики в юриспруденции. Глубокие знания уголовного, гражданского и административного права.</p>
+                </div>
+
+                <div class="advantage-item card-shadow">
+                    <span class="png-background adv-icon" style="background-image: url('operational-efficiency-icon.png');">Эффективность</span>
+                    <p><strong>Результаты:</strong> Успешная защита клиентов в сложных делах. Достижение положительных решений в спорных ситуациях.</p>
+                </div>
+
+                <div class="advantage-item card-shadow">
+                    <span class="png-background adv-icon" style="background-image: url('transparency-icon.png');">Прозрачность</span>
+                    <p><strong>Честность:</strong> Откровенное обсуждение перспектив дела. Понятные условия сотрудничества без скрытых платежей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h3>Нужна помощь опытного адвоката?</h3>
+            <p>Получите профессиональную консультацию прямо сейчас</p>
+            <a href="tel:+79113942789" class="btn secondary-btn phone">+7 911 394-27-89</a>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div style="max-width: 600px; margin: 0 auto; background: var(--light); padding: 2rem; border-radius: var(--border-radius); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.5rem; color: var(--gray); font-size: 0.9rem;">Телефон:</p>
+                    <a href="tel:+79113942789" style="font-size: 1.2rem; font-weight: 600;">+7 911 394-27-89</a>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.5rem; color: var(--gray); font-size: 0.9rem;">Email:</p>
+                    <a href="mailto:kolokol-2@inbox.ru" style="font-size: 1.1rem;">kolokol-2@inbox.ru</a>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.5rem; color: var(--gray); font-size: 0.9rem;">Место работы:</p>
+                    <p style="margin: 0.5rem 0; font-family: 'Inter', sans-serif;">
+                        Коллегия адвокатов Псковской области «Кузнецов и партнёры»<br>
+                        г. Псков, ул. Аллейная, д. 1
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 0;">
+                    <p style="margin-bottom: 0.5rem; color: var(--gray); font-size: 0.9rem;">Регион обслуживания:</p>
+                    <p style="margin: 0; font-family: 'Inter', sans-serif;">Псковская область · выезд в Санкт-Петербург и Москву</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-title">КОЛОКОЛЬЦЕВ АЛЕКСЕЙ СЕРГЕЕВИЧ</p>
+            <p class="footer-association">Адвокат</p>
+            <div class="requisites">
+                <span>ОГРН 1186000000438</span> <br class="mobile-break"> <span>ИНН 6027193495</span>
+            </div>
+            <div style="max-width: 800px; margin: 2rem auto 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: left; font-size: 0.8rem; line-height: 1.6; color: #999;">
+                <p style="margin-bottom: 0.8rem;">
+                    Информация на странице носит справочный характер и не является публичной офертой или гарантией исхода дела. Оказание юридической помощи осуществляется на основании соглашения в соответствии с законодательством об адвокатской деятельности и адвокатуре.
+                </p>
+            </div>
+            <div class="footer-info">© 2025 Все права защищены.</div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mainNav');
+            const button = document.querySelector('.mobile-menu-btn');
+            nav.classList.toggle('active');
+            button.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const nav = document.getElementById('mainNav');
+            const button = document.querySelector('.mobile-menu-btn');
+            nav.classList.remove('active');
+            button.classList.remove('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mainNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const isClickInside = nav.contains(event.target) || menuBtn.contains(event.target);
+
+            if (!isClickInside && nav.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
